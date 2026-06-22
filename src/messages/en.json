@@ -1,0 +1,305 @@
+{
+  "site": {
+    "name": "Precision Machinery",
+    "tagline": "Quality Machinery Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Professional Machinery Manufacturing",
+    "heroSubtitle": "Providing high-quality industrial machinery solutions for global customers",
+    "viewProducts": "View Products",
+    "featuredProducts": "Featured Products",
+    "learnMore": "Learn More"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "High-quality machinery for industrial applications",
+    "specs": "Specifications",
+    "features": "Features",
+    "applications": "Applications",
+    "requestQuote": "Request Quote",
+    "backToProducts": "Back to Products",
+    "categories": {
+      "all": "All Products",
+      "cnc": "CNC & Machining",
+      "cutting": "Cutting & Fabrication",
+      "forming": "Forming & Pressing",
+      "welding": "Welding & Robotics",
+      "molding": "Molding & Casting"
+    }
+  },
+  "product": {
+    "cnc-machine": {
+      "name": "CNC Machining Center",
+      "shortDesc": "High-precision CNC machining center for complex parts processing",
+      "description": "Our CNC Machining Center delivers exceptional precision and efficiency for complex machining operations. Designed for high-volume production environments, it features advanced control systems and robust construction.",
+      "specs": {
+        "workArea": "Work Area",
+        "workAreaValue": "500 x 400 x 300 mm",
+        "spindleSpeed": "Spindle Speed",
+        "spindleSpeedValue": "12000 RPM",
+        "accuracy": "Accuracy",
+        "accuracyValue": "±0.005 mm",
+        "power": "Power",
+        "powerValue": "15 kW"
+      },
+      "features": [
+        "High-precision linear guides",
+        "Automatic tool changer with 20 tools",
+        "Advanced CNC control system",
+        "Coolant system with filtration"
+      ],
+      "applications": [
+        "Automotive parts manufacturing",
+        "Aerospace components",
+        "Medical device production",
+        "Precision mold making"
+      ]
+    },
+    "laser-cutter": {
+      "name": "Laser Cutting Machine",
+      "shortDesc": "High-speed laser cutting system for metal sheets",
+      "description": "Our Laser Cutting Machine offers fast, precise cutting of metal sheets with minimal waste. The advanced laser technology ensures clean cuts and high productivity for industrial manufacturing.",
+      "specs": {
+        "cuttingArea": "Cutting Area",
+        "cuttingAreaValue": "1500 x 3000 mm",
+        "laserPower": "Laser Power",
+        "laserPowerValue": "3000W",
+        "cuttingSpeed": "Cutting Speed",
+        "cuttingSpeedValue": "30 m/min",
+        "thickness": "Max Thickness",
+        "thicknessValue": "20 mm"
+      },
+      "features": [
+        "Fiber laser technology",
+        "Automatic focus adjustment",
+        "Integrated exhaust system",
+        "CNC control with nesting software"
+      ],
+      "applications": [
+        "Sheet metal fabrication",
+        "Automotive body parts",
+        "Industrial equipment manufacturing",
+        "Metal artwork production"
+      ]
+    },
+    "press-machine": {
+      "name": "Hydraulic Press Machine",
+      "shortDesc": "Heavy-duty hydraulic press for metal forming",
+      "description": "Our Hydraulic Press Machine provides powerful and precise metal forming capabilities. Built with heavy-duty construction, it handles demanding forming operations with consistent quality.",
+      "specs": {
+        "pressForce": "Press Force",
+        "pressForceValue": "500 tons",
+        "stroke": "Stroke Length",
+        "strokeValue": "400 mm",
+        "workTable": "Work Table Size",
+        "workTableValue": "800 x 600 mm",
+        "speed": "Operation Speed",
+        "speedValue": "15 strokes/min"
+      },
+      "features": [
+        "Precise pressure control",
+        "Safety interlock system",
+        "Variable speed operation",
+        "Digital position monitoring"
+      ],
+      "applications": [
+        "Automotive stamping",
+        "Metal forming operations",
+        "Sheet metal deep drawing",
+        "Industrial component manufacturing"
+      ]
+    },
+    "welding-robot": {
+      "name": "Industrial Welding Robot",
+      "shortDesc": "Automated welding system for precision joining",
+      "description": "Our Industrial Welding Robot delivers consistent, high-quality welds in automated production environments. The multi-axis robot arm provides precise positioning for complex welding tasks.",
+      "specs": {
+        "reach": "Arm Reach",
+        "reachValue": "1500 mm",
+        "axes": "Number of Axes",
+        "axesValue": "6 axes",
+        "payload": "Payload Capacity",
+        "payloadValue": "10 kg",
+        "weldingSpeed": "Welding Speed",
+        "weldingSpeedValue": "5 m/min"
+      },
+      "features": [
+        "Multi-axis articulated arm",
+        "Programmable welding paths",
+        "Integrated safety sensors",
+        "Touch screen control interface"
+      ],
+      "applications": [
+        "Automotive assembly",
+        "Heavy equipment manufacturing",
+        "Pipeline construction",
+        "Structural steel fabrication"
+      ]
+    },
+    "injection-molding": {
+      "name": "Injection Molding Machine",
+      "shortDesc": "High-efficiency plastic injection molding equipment",
+      "description": "Our Injection Molding Machine delivers high-efficiency production of plastic components with consistent quality. Features advanced temperature control and energy-saving technology for optimal performance.",
+      "specs": {
+        "clampingForce": "Clamping Force",
+        "clampingForceValue": "200 tons",
+        "shotWeight": "Shot Weight",
+        "shotWeightValue": "450 g",
+        "moldThickness": "Mold Thickness",
+        "moldThicknessValue": "150-450 mm",
+        "cycleTime": "Cycle Time",
+        "cycleTimeValue": "3.5 sec"
+      },
+      "features": [
+        "Servo motor drive system",
+        "PID temperature control",
+        "Automatic mold height adjustment",
+        "Energy-efficient hydraulic system"
+      ],
+      "applications": [
+        "Consumer electronics housing",
+        "Automotive interior parts",
+        "Medical device components",
+        "Packaging container production"
+      ]
+    },
+    "lathe": {
+      "name": "CNC Lathe",
+      "shortDesc": "Precision turning machine for cylindrical parts",
+      "description": "Our CNC Lathe provides high-precision turning operations for cylindrical and complex-shaped parts. Ideal for small to medium batch production with excellent repeatability.",
+      "specs": {
+        "maxTurning": "Max Turning Diameter",
+        "maxTurningValue": "320 mm",
+        "maxLength": "Max Turning Length",
+        "maxLengthValue": "500 mm",
+        "spindleSpeed": "Spindle Speed",
+        "spindleSpeedValue": "4500 RPM",
+        "toolCapacity": "Tool Capacity",
+        "toolCapacityValue": "12 stations"
+      },
+      "features": [
+        "Linear guideway system",
+        "Live tooling capability",
+        "Y-axis option available",
+        "High-rigidity cast iron bed"
+      ],
+      "applications": [
+        "Shaft manufacturing",
+        "Disc-type parts production",
+        "Threading operations",
+        "Precision component machining"
+      ]
+    },
+    "grinding": {
+      "name": "Surface Grinding Machine",
+      "shortDesc": "High-precision surface grinding equipment",
+      "description": "Our Surface Grinding Machine delivers exceptional surface finish quality for precision parts. Features advanced vibration damping and thermal compensation for stable precision.",
+      "specs": {
+        "tableSize": "Table Size",
+        "tableSizeValue": "600 x 300 mm",
+        "grindingArea": "Grinding Area",
+        "grindingAreaValue": "600 x 320 mm",
+        "spindlePower": "Spindle Power",
+        "spindlePowerValue": "5.5 kW",
+        "accuracy": "Surface Accuracy",
+        "accuracyValue": "±0.002 mm"
+      },
+      "features": [
+        "Automatic vertical feed",
+        "Digital position display",
+        "Coolant filtration system",
+        "Precision ball screw drive"
+      ],
+      "applications": [
+        "Mold surface finishing",
+        "Precision plate processing",
+        "Tool manufacturing",
+        "Component surface grinding"
+      ]
+    },
+    "edm": {
+      "name": "EDM Wire Cutting Machine",
+      "shortDesc": "Electrical discharge machining for complex shapes",
+      "description": "Our EDM Wire Cutting Machine enables precise cutting of complex shapes in hard materials. Ideal for tool manufacturing and precision component production.",
+      "specs": {
+        "travelXyz": "Travel X/Y/Z",
+        "travelXyzValue": "400 x 300 x 250 mm",
+        "maxWorkpiece": "Max Workpiece Height",
+        "maxWorkpieceValue": "300 mm",
+        "wireDiameter": "Wire Diameter",
+        "wireDiameterValue": "0.15-0.30 mm",
+        "cuttingSpeed": "Max Cutting Speed",
+        "cuttingSpeedValue": "300 mm²/min"
+      },
+      "features": [
+        "Submerged wire cutting",
+        "Taper cutting capability",
+        "Auto wire threading system",
+        "High rigidity machine structure"
+      ],
+      "applications": [
+        "Precision tool and die making",
+        "Complex shape machining",
+        "Hard material processing",
+        "Medical implant manufacturing"
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Precision Machinery. All rights reserved.",
+    "address": "Industrial Zone, Technology Park",
+    "phone": "Tel: +86 400-888-8888",
+    "email": "Email: info@precisionmachinery.com"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Professional Machinery Manufacturing Expert",
+    "introduction": "Precision Machinery is a leading manufacturer of industrial machinery with over 20 years of experience. We specialize in CNC machining centers, laser cutting machines, hydraulic presses, welding robots, and other precision equipment.",
+    "mission": "Our Mission",
+    "missionText": "To provide high-quality, reliable machinery solutions that empower our customers to achieve greater productivity and success.",
+    "vision": "Our Vision",
+    "visionText": "To become the global leader in precision machinery manufacturing through innovation and excellence.",
+    "values": "Core Values",
+    "value1": "Quality - We deliver products that meet the highest standards",
+    "value2": "Innovation - We continuously improve through technology",
+    "value3": "Customer Focus - We prioritize customer satisfaction",
+    "value4": "Integrity - We conduct business with honesty and transparency",
+    "team": "Our Team",
+    "teamText": "Our team consists of experienced engineers, technicians, and industry experts dedicated to delivering exceptional products and services.",
+    "facility": "Our Facilities",
+    "facilityText": "With state-of-the-art manufacturing facilities spanning over 50,000 square meters, we have the capacity to meet large-scale production demands while maintaining strict quality control.",
+    "certifications": "Certifications",
+    "cert1": "ISO 9001:2015",
+    "cert2": "CE Certification",
+    "cert3": "SGS Approved",
+    "cert4": "TUV Rheinland"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "contactInfo": "Contact Information",
+    "address": "Industrial Zone, Technology Park",
+    "addressDetail": "No. 888 Industrial Road, High-Tech Zone, Shanghai, China",
+    "phone": "Tel",
+    "phoneValue": "+86 400-888-8888",
+    "email": "Email",
+    "emailValue": "info@precisionmachinery.com",
+    "fax": "Fax",
+    "faxValue": "+86 21-8888-8888",
+    "workingHours": "Working Hours",
+    "workingHoursText": "Monday - Friday: 8:00 AM - 6:00 PM (UTC+8)",
+    "sendMessage": "Send Message",
+    "name": "Name",
+    "company": "Company",
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Thank you! Your message has been sent successfully.",
+    "interestedProduct": "Interested Product"
+  }
+}

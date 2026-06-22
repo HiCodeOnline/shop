@@ -1,0 +1,305 @@
+{
+  "site": {
+    "name": "精密机械",
+    "tagline": "优质机械解决方案"
+  },
+  "nav": {
+    "home": "首页",
+    "products": "产品中心",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "home": {
+    "heroTitle": "专业机械制造",
+    "heroSubtitle": "为全球客户提供高品质工业机械解决方案",
+    "viewProducts": "查看产品",
+    "featuredProducts": "精选产品",
+    "learnMore": "了解更多"
+  },
+  "products": {
+    "title": "产品中心",
+    "subtitle": "高品质工业机械设备",
+    "specs": "技术规格",
+    "features": "产品特点",
+    "applications": "应用领域",
+    "requestQuote": "获取报价",
+    "backToProducts": "返回产品列表",
+    "categories": {
+      "all": "全部产品",
+      "cnc": "CNC加工",
+      "cutting": "切割加工",
+      "forming": "成型冲压",
+      "welding": "焊接机器人",
+      "molding": "注塑铸造"
+    }
+  },
+  "product": {
+    "cnc-machine": {
+      "name": "CNC数控加工中心",
+      "shortDesc": "高精度数控加工中心，适用于复杂零件加工",
+      "description": "我们的CNC数控加工中心为复杂加工操作提供卓越的精度和效率。专为大批量生产环境设计，配备先进的控制系统和坚固的结构。",
+      "specs": {
+        "workArea": "工作区域",
+        "workAreaValue": "500 x 400 x 300 mm",
+        "spindleSpeed": "主轴转速",
+        "spindleSpeedValue": "12000 RPM",
+        "accuracy": "加工精度",
+        "accuracyValue": "±0.005 mm",
+        "power": "功率",
+        "powerValue": "15 kW"
+      },
+      "features": [
+        "高精度线性导轨",
+        "20工位自动换刀系统",
+        "先进数控控制系统",
+        "带过滤功能的冷却系统"
+      ],
+      "applications": [
+        "汽车零部件制造",
+        "航空航天零件",
+        "医疗器械生产",
+        "精密模具制造"
+      ]
+    },
+    "laser-cutter": {
+      "name": "激光切割机",
+      "shortDesc": "高速激光切割系统，适用于金属板材切割",
+      "description": "我们的激光切割机可快速、精确地切割金属板材，最大限度减少浪费。先进的激光技术确保切口干净，工业制造效率高。",
+      "specs": {
+        "cuttingArea": "切割区域",
+        "cuttingAreaValue": "1500 x 3000 mm",
+        "laserPower": "激光功率",
+        "laserPowerValue": "3000W",
+        "cuttingSpeed": "切割速度",
+        "cuttingSpeedValue": "30 m/min",
+        "thickness": "最大厚度",
+        "thicknessValue": "20 mm"
+      },
+      "features": [
+        "光纤激光技术",
+        "自动聚焦调节",
+        "集成排烟系统",
+        "带排版软件的数控控制"
+      ],
+      "applications": [
+        "钣金加工",
+        "汽车车身零件",
+        "工业设备制造",
+        "金属艺术品制作"
+      ]
+    },
+    "press-machine": {
+      "name": "液压冲压机",
+      "shortDesc": "重型液压冲压设备，适用于金属成型",
+      "description": "我们的液压冲压机提供强大而精确的金属成型能力。采用重型结构设计，可处理苛刻的成型操作，质量稳定可靠。",
+      "specs": {
+        "pressForce": "冲压压力",
+        "pressForceValue": "500吨",
+        "stroke": "行程长度",
+        "strokeValue": "400 mm",
+        "workTable": "工作台尺寸",
+        "workTableValue": "800 x 600 mm",
+        "speed": "操作速度",
+        "speedValue": "15次/分钟"
+      },
+      "features": [
+        "精确压力控制",
+        "安全联锁系统",
+        "变速操作",
+        "数字位置监控"
+      ],
+      "applications": [
+        "汽车冲压",
+        "金属成型操作",
+        "钣金深拉伸",
+        "工业零件制造"
+      ]
+    },
+    "welding-robot": {
+      "name": "工业焊接机器人",
+      "shortDesc": "自动化焊接系统，实现精密焊接",
+      "description": "我们的工业焊接机器人可在自动化生产环境中提供稳定、高质量的焊接。多轴机械臂为复杂焊接任务提供精确定位。",
+      "specs": {
+        "reach": "臂展范围",
+        "reachValue": "1500 mm",
+        "axes": "轴数",
+        "axesValue": "6轴",
+        "payload": "负载能力",
+        "payloadValue": "10 kg",
+        "weldingSpeed": "焊接速度",
+        "weldingSpeedValue": "5 m/min"
+      },
+      "features": [
+        "多轴关节臂",
+        "可编程焊接路径",
+        "集成安全传感器",
+        "触摸屏控制界面"
+      ],
+      "applications": [
+        "汽车组装",
+        "重型设备制造",
+        "管道建设",
+        "钢结构制造"
+      ]
+    },
+    "injection-molding": {
+      "name": "注塑机",
+      "shortDesc": "高效塑料注塑成型设备",
+      "description": "我们的注塑机以稳定的质量高效生产塑料部件。配备先进的温度控制和节能技术，性能卓越。",
+      "specs": {
+        "clampingForce": "锁模力",
+        "clampingForceValue": "200吨",
+        "shotWeight": "射胶量",
+        "shotWeightValue": "450 g",
+        "moldThickness": "模具厚度",
+        "moldThicknessValue": "150-450 mm",
+        "cycleTime": "循环时间",
+        "cycleTimeValue": "3.5秒"
+      },
+      "features": [
+        "伺服电机驱动系统",
+        "PID温度控制",
+        "自动调模功能",
+        "节能液压系统"
+      ],
+      "applications": [
+        "消费电子外壳",
+        "汽车内饰件",
+        "医疗器械组件",
+        "包装容器生产"
+      ]
+    },
+    "lathe": {
+      "name": "数控车床",
+      "shortDesc": "精密车削设备，适用于圆柱形零件",
+      "description": "我们的数控车床为圆柱形和复杂形状零件提供高精度车削操作。非常适合中小批量生产，具有出色的重复精度。",
+      "specs": {
+        "maxTurning": "最大回转直径",
+        "maxTurningValue": "320 mm",
+        "maxLength": "最大车削长度",
+        "maxLengthValue": "500 mm",
+        "spindleSpeed": "主轴转速",
+        "spindleSpeedValue": "4500 RPM",
+        "toolCapacity": "刀塔容量",
+        "toolCapacityValue": "12工位"
+      },
+      "features": [
+        "直线导轨系统",
+        "动力刀塔功能",
+        "可选Y轴配置",
+        "高刚性铸铁床身"
+      ],
+      "applications": [
+        "轴类零件制造",
+        "盘类零件加工",
+        "螺纹加工",
+        "精密零件机加工"
+      ]
+    },
+    "grinding": {
+      "name": "平面磨床",
+      "shortDesc": "高精度平面磨削设备",
+      "description": "我们的平面磨床为精密零件提供卓越的表面光洁度。配备先进的减振和热补偿功能，精度稳定。",
+      "specs": {
+        "tableSize": "工作台尺寸",
+        "tableSizeValue": "600 x 300 mm",
+        "grindingArea": "磨削区域",
+        "grindingAreaValue": "600 x 320 mm",
+        "spindlePower": "主轴功率",
+        "spindlePowerValue": "5.5 kW",
+        "accuracy": "表面精度",
+        "accuracyValue": "±0.002 mm"
+      },
+      "features": [
+        "自动垂直进给",
+        "数字位置显示",
+        "冷却液过滤系统",
+        "精密滚珠丝杠驱动"
+      ],
+      "applications": [
+        "模具表面精加工",
+        "精密板件加工",
+        "刀具制造",
+        "零件表面磨削"
+      ]
+    },
+    "edm": {
+      "name": "电火花线切割机",
+      "shortDesc": "电火花加工，适用于复杂形状",
+      "description": "我们的电火花线切割机可对硬质材料进行复杂形状的精密切割。非常适合刀具制造和精密零件生产。",
+      "specs": {
+        "travelXyz": "行程 X/Y/Z",
+        "travelXyzValue": "400 x 300 x 250 mm",
+        "maxWorkpiece": "最大工件高度",
+        "maxWorkpieceValue": "300 mm",
+        "wireDiameter": "钼丝直径",
+        "wireDiameterValue": "0.15-0.30 mm",
+        "cuttingSpeed": "最大切割速度",
+        "cuttingSpeedValue": "300 mm²/min"
+      },
+      "features": [
+        "浸水切割",
+        "锥度切割功能",
+        "自动穿丝系统",
+        "高刚性机身结构"
+      ],
+      "applications": [
+        "精密刀具模具制造",
+        "复杂形状加工",
+        "硬质材料加工",
+        "医疗植入物制造"
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 精密机械 版权所有",
+    "address": "科技园工业区",
+    "phone": "电话：400-888-8888",
+    "email": "邮箱：info@precisionmachinery.com"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "专业机械制造专家",
+    "introduction": "精密机械是一家拥有20多年经验的工业机械领先制造商。我们专注于CNC加工中心、激光切割机、液压冲压机、焊接机器人等精密设备。",
+    "mission": "我们的使命",
+    "missionText": "提供高质量、可靠的机械解决方案，帮助客户实现更高的生产力和成功。",
+    "vision": "我们的愿景",
+    "visionText": "通过创新和卓越，成为精密机械制造领域的全球领导者。",
+    "values": "核心价值观",
+    "value1": "品质 - 我们交付符合最高标准的产品",
+    "value2": "创新 - 我们通过技术不断改进",
+    "value3": "客户至上 - 我们优先考虑客户满意度",
+    "value4": "诚信 - 我们以诚实和透明的方式开展业务",
+    "team": "我们的团队",
+    "teamText": "我们的团队由经验丰富的工程师、技术人员和行业专家组成，致力于提供卓越的产品和服务。",
+    "facility": "我们的设施",
+    "facilityText": "拥有超过50,000平方米的先进制造设施，我们有能力满足大规模生产需求，同时保持严格的质量控制。",
+    "certifications": "资质认证",
+    "cert1": "ISO 9001:2015",
+    "cert2": "CE认证",
+    "cert3": "SGS认证",
+    "cert4": "TUV莱茵认证"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "与我们的团队取得联系",
+    "contactInfo": "联系方式",
+    "address": "地址",
+    "addressDetail": "上海市高新区工业路888号",
+    "phone": "电话",
+    "phoneValue": "400-888-8888",
+    "email": "邮箱",
+    "emailValue": "info@precisionmachinery.com",
+    "fax": "传真",
+    "faxValue": "+86 21-8888-8888",
+    "workingHours": "工作时间",
+    "workingHoursText": "周一至周五：上午8:00 - 下午6:00 (UTC+8)",
+    "sendMessage": "发送消息",
+    "name": "姓名",
+    "company": "公司",
+    "message": "留言",
+    "submit": "提交",
+    "success": "感谢您的留言！我们会尽快回复您。",
+    "interestedProduct": "感兴趣的产品"
+  }
+}
