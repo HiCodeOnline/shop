@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import enMessages from "@/messages/en.json";
+import zhCNMessages from "@/messages/zh-CN.json";
+import zhTWMessages from "@/messages/zh-TW.json";
 
 const PRODUCTS = [
   "cnc-machine",
@@ -12,31 +14,38 @@ const PRODUCTS = [
   "edm",
 ];
 
-const LOCALES = ["en", "zh-CN", "zh-TW"];
+const LANGS = ["en", "zh-CN", "zh-TW"];
 
-export async function generateStaticParams() {
-  return LOCALES.flatMap((locale) =>
-    PRODUCTS.map((slug) => ({ locale, slug }))
+const messagesMap = {
+  en: enMessages,
+  "zh-CN": zhCNMessages,
+  "zh-TW": zhTWMessages,
+};
+
+export function generateStaticParams() {
+  return LANGS.flatMap((lang) =>
+    PRODUCTS.map((slug) => ({ lang, slug }))
   );
 }
 
 export default async function ProductDetailPage({ params }) {
-  const { locale, slug } = params;
-  const t = await getTranslations({ locale });
+  const { lang, slug } = await params;
+  const t = messagesMap[lang] || messagesMap.en;
 
-  const productPrefix = `product.${slug}`;
+  const product = t.product[slug];
+  const productsGlobal = t.products;
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
-          href={`/${locale}/products`}
+          href={`/${lang}/products`}
           className="inline-flex items-center text-blue-600 dark:text-blue-400 mb-8 hover:underline"
         >
           <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          {t("products.backToProducts")}
+          {productsGlobal.backToProducts}
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -44,11 +53,8 @@ export default async function ProductDetailPage({ params }) {
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <img
                 src={`/products/${slug}/main.jpg`}
-                alt={t(`${productPrefix}.name`)}
+                alt={product?.name}
                 className="w-full aspect-video object-cover"
-                onError={(e) => {
-                  e.target.src = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industrial%20${slug}%20machine%20in%20factory&image_size=landscape_16_9`;
-                }}
               />
             </div>
             <div className="grid grid-cols-3 gap-4 mt-4">
@@ -56,11 +62,8 @@ export default async function ProductDetailPage({ params }) {
                 <div key={i} className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                   <img
                     src={`/products/${slug}/detail-${i}.jpg`}
-                    alt={`${t(`${productPrefix}.name`)} detail ${i}`}
+                    alt={`${product?.name} detail ${i}`}
                     className="w-full aspect-square object-cover"
-                    onError={(e) => {
-                      e.target.src = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industrial%20${slug}%20machine%20detail%20view&image_size=square`;
-                    }}
                   />
                 </div>
               ))}
@@ -69,24 +72,24 @@ export default async function ProductDetailPage({ params }) {
 
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              {t(`${productPrefix}.name`)}
+              {product?.name}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              {t(`${productPrefix}.description`)}
+              {product?.description}
             </p>
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t("products.specs")}
+                {productsGlobal.specs}
               </h2>
               <div className="grid grid-cols-2 gap-4">
-                {Object.entries(t.raw(`${productPrefix}.specs`))
+                {product?.specs && Object.entries(product.specs)
                   .filter(([key]) => !key.endsWith("Value"))
                   .map(([key, label]) => (
                     <div key={key} className="border-b border-gray-200 dark:border-gray-700 pb-2">
                       <div className="text-sm text-gray-500 dark:text-gray-400">{label}</div>
                       <div className="font-medium text-gray-900 dark:text-white">
-                        {t(`${productPrefix}.specs.${key}Value`)}
+                        {product.specs[`${key}Value`]}
                       </div>
                     </div>
                   ))}
@@ -95,10 +98,10 @@ export default async function ProductDetailPage({ params }) {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t("products.features")}
+                {productsGlobal.features}
               </h2>
               <ul className="space-y-2">
-                {t.raw(`${productPrefix}.features`).map((feature, index) => (
+                {product?.features?.map((feature, index) => (
                   <li key={index} className="flex items-start">
                     <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -111,10 +114,10 @@ export default async function ProductDetailPage({ params }) {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t("products.applications")}
+                {productsGlobal.applications}
               </h2>
               <ul className="space-y-2">
-                {t.raw(`${productPrefix}.applications`).map((application, index) => (
+                {product?.applications?.map((application, index) => (
                   <li key={index} className="flex items-start">
                     <svg className="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -126,10 +129,10 @@ export default async function ProductDetailPage({ params }) {
             </div>
 
             <Link
-              href={`/${locale}/contact?product=${slug}`}
+              href={`/${lang}/contact?product=${slug}`}
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
             >
-              {t("products.requestQuote")}
+              {productsGlobal.requestQuote}
             </Link>
           </div>
         </div>

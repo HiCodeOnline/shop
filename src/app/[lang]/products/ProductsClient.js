@@ -1,16 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 const CATEGORIES = [
-  { id: "all", label: "products.categories.all" },
-  { id: "cnc", label: "products.categories.cnc" },
-  { id: "cutting", label: "products.categories.cutting" },
-  { id: "forming", label: "products.categories.forming" },
-  { id: "welding", label: "products.categories.welding" },
-  { id: "molding", label: "products.categories.molding" },
+  { id: "all", key: "all" },
+  { id: "cnc", key: "cnc" },
+  { id: "cutting", key: "cutting" },
+  { id: "forming", key: "forming" },
+  { id: "welding", key: "welding" },
+  { id: "molding", key: "molding" },
 ];
 
 const PRODUCTS = [
@@ -24,8 +23,8 @@ const PRODUCTS = [
   { id: "edm", category: "cutting" },
 ];
 
-export default function ProductsPage() {
-  const t = useTranslations();
+export default function ProductsPage({ lang, messages }) {
+  const t = messages;
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const filteredProducts = selectedCategory === "all"
@@ -37,10 +36,10 @@ export default function ProductsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t("products.title")}
+            {t.products.title}
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            {t("products.subtitle")}
+            {t.products.subtitle}
           </p>
         </div>
 
@@ -55,7 +54,7 @@ export default function ProductsPage() {
                   : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-md"
               }`}
             >
-              {t(category.label)}
+              {t.products.categories[category.key]}
             </button>
           ))}
         </div>
@@ -65,13 +64,13 @@ export default function ProductsPage() {
             {filteredProducts.map((product) => (
               <Link
                 key={product.id}
-                href={`/products/${product.id}`}
+                href={`/${lang}/products/${product.id}`}
                 className="group bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-video bg-gray-200 dark:bg-gray-700 relative">
                   <img
                     src={`/products/${product.id}/main.jpg`}
-                    alt={t(`product.${product.id}.name`)}
+                    alt={t.product[product.id]?.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
                       e.target.src = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industrial%20${product.id}%20machine%20in%20factory&image_size=landscape_16_9`;
@@ -80,13 +79,13 @@ export default function ProductsPage() {
                 </div>
                 <div className="p-6">
                   <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    {t(`product.${product.id}.name`)}
+                    {t.product[product.id]?.name}
                   </h2>
                   <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                    {t(`product.${product.id}.shortDesc`)}
+                    {t.product[product.id]?.shortDesc}
                   </p>
                   <div className="mt-4 text-blue-600 dark:text-blue-400 font-medium flex items-center">
-                    {t("home.learnMore")}
+                    {t.home.learnMore}
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -101,7 +100,7 @@ export default function ProductsPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              {t("products.categories.all")}
+              {t.products.categories.all}
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
               No products found in this category

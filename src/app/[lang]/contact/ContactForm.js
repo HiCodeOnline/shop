@@ -1,31 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const PRODUCTS = [
-  { id: "cnc-machine", name: "product.cnc-machine.name" },
-  { id: "laser-cutter", name: "product.laser-cutter.name" },
-  { id: "press-machine", name: "product.press-machine.name" },
-  { id: "welding-robot", name: "product.welding-robot.name" },
-  { id: "injection-molding", name: "product.injection-molding.name" },
-  { id: "lathe", name: "product.lathe.name" },
-  { id: "grinding", name: "product.grinding.name" },
-  { id: "edm", name: "product.edm.name" },
+  { id: "cnc-machine" },
+  { id: "laser-cutter" },
+  { id: "press-machine" },
+  { id: "welding-robot" },
+  { id: "injection-molding" },
+  { id: "lathe" },
+  { id: "grinding" },
+  { id: "edm" },
 ];
 
-export default function ContactForm() {
-  const t = useTranslations();
-  const searchParams = useSearchParams();
-  const preselectedProduct = searchParams.get("product") || "";
+export default function ContactForm({ lang, messages, preselectedProduct }) {
+  const t = messages;
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
     phone: "",
-    product: preselectedProduct,
+    product: preselectedProduct || "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -51,7 +48,7 @@ export default function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-            {t("contact.success")}
+            {t.contact.success}
           </h3>
         </div>
       ) : (
@@ -60,7 +57,7 @@ export default function ContactForm() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  {t("contact.name")}
+                  {t.contact.name}
                 </label>
                 <input
                   type="text"
@@ -91,7 +88,7 @@ export default function ContactForm() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  {t("contact.company")}
+                  {t.contact.company}
                 </label>
                 <input
                   type="text"
@@ -104,7 +101,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  {t("contact.phone")}
+                  {t.contact.phone}
                 </label>
                 <input
                   type="tel"
@@ -119,7 +116,7 @@ export default function ContactForm() {
 
             <div>
               <label htmlFor="product" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                {t("contact.interestedProduct")}
+                {t.contact.interestedProduct}
               </label>
               <select
                 id="product"
@@ -128,10 +125,10 @@ export default function ContactForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="">{t("products.categories.all")}</option>
+                <option value="">{t.products.categories.all}</option>
                 {PRODUCTS.map((product) => (
                   <option key={product.id} value={product.id}>
-                    {t(product.name)}
+                    {t.product[product.id]?.name}
                   </option>
                 ))}
               </select>
@@ -139,7 +136,7 @@ export default function ContactForm() {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                {t("contact.message")}
+                {t.contact.message}
               </label>
               <textarea
                 id="message"
@@ -156,7 +153,7 @@ export default function ContactForm() {
               type="submit"
               className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
             >
-              {t("contact.submit")}
+              {t.contact.submit}
             </button>
           </div>
         </form>

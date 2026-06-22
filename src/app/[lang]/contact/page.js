@@ -1,21 +1,35 @@
-"use client";
-
 import { Suspense } from "react";
-import { useTranslations } from "next-intl";
 import ContactForm from "./ContactForm";
+import enMessages from "@/messages/en.json";
+import zhCNMessages from "@/messages/zh-CN.json";
+import zhTWMessages from "@/messages/zh-TW.json";
 
-export default function ContactPage() {
-  const t = useTranslations();
+const messagesMap = {
+  en: enMessages,
+  "zh-CN": zhCNMessages,
+  "zh-TW": zhTWMessages,
+};
+
+const LANGS = ["en", "zh-CN", "zh-TW"];
+
+export function generateStaticParams() {
+  return LANGS.map((lang) => ({ lang }));
+}
+
+export default async function ContactPage({ params, searchParams }) {
+  const { lang } = await params;
+  const preselectedProduct = searchParams?.product || "";
+  const t = messagesMap[lang] || messagesMap.en;
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <section className="bg-gradient-to-br from-blue-900 to-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {t("contact.title")}
+            {t.contact.title}
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            {t("contact.subtitle")}
+            {t.contact.subtitle}
           </p>
         </div>
       </section>
@@ -25,7 +39,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                {t("contact.contactInfo")}
+                {t.contact.contactInfo}
               </h2>
 
               <div className="space-y-6">
@@ -38,10 +52,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                      {t("contact.address")}
+                      {t.contact.address}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      {t("contact.addressDetail")}
+                      {t.contact.addressDetail}
                     </p>
                   </div>
                 </div>
@@ -54,10 +68,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                      {t("contact.phone")}
+                      {t.contact.phone}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      {t("contact.phoneValue")}
+                      {t.contact.phoneValue}
                     </p>
                   </div>
                 </div>
@@ -70,10 +84,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                      {t("contact.email")}
+                      {t.contact.email}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      {t("contact.emailValue")}
+                      {t.contact.emailValue}
                     </p>
                   </div>
                 </div>
@@ -86,10 +100,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                      {t("contact.fax")}
+                      {t.contact.fax}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      {t("contact.faxValue")}
+                      {t.contact.faxValue}
                     </p>
                   </div>
                 </div>
@@ -102,10 +116,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                      {t("contact.workingHours")}
+                      {t.contact.workingHours}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      {t("contact.workingHoursText")}
+                      {t.contact.workingHoursText}
                     </p>
                   </div>
                 </div>
@@ -114,13 +128,9 @@ export default function ContactPage() {
 
             <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                {t("contact.sendMessage")}
+                {t.contact.sendMessage}
               </h2>
-              <Suspense fallback={<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 h-96 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              </div>}>
-                <ContactForm />
-              </Suspense>
+              <ContactForm lang={lang} messages={t} preselectedProduct={preselectedProduct} />
             </div>
           </div>
         </div>

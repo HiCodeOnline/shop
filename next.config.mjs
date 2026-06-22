@@ -1,17 +1,6 @@
-import createNextIntlPlugin from 'next-intl/plugin';
-
-const withNextIntl = createNextIntlPlugin({
-  requestConfig: './src/i18n/request.ts',
-  experimental: {
-    messages: {
-      path: './src/messages',
-      format: 'json'
-    }
-  }
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // output: 'export', // 开发模式移除，构建时通过 generateStaticParams 静态生成页面
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;
