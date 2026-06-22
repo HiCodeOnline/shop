@@ -1,8 +1,5 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
 const PRODUCTS = [
   "cnc-machine",
@@ -15,23 +12,17 @@ const PRODUCTS = [
   "edm",
 ];
 
-export default function ProductDetailPage() {
-  const params = useParams();
-  const slug = params.slug;
-  const t = useTranslations();
+const LOCALES = ["en", "zh-CN", "zh-TW"];
 
-  if (!PRODUCTS.includes(slug)) {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Product not found</h1>
-          <Link href="/products" className="mt-4 text-blue-600 dark:text-blue-400">
-            {t("products.backToProducts")}
-          </Link>
-        </div>
-      </div>
-    );
-  }
+export async function generateStaticParams() {
+  return LOCALES.flatMap((locale) =>
+    PRODUCTS.map((slug) => ({ locale, slug }))
+  );
+}
+
+export default async function ProductDetailPage({ params }) {
+  const { locale, slug } = params;
+  const t = await getTranslations({ locale });
 
   const productPrefix = `product.${slug}`;
 
@@ -39,7 +30,7 @@ export default function ProductDetailPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
-          href="/products"
+          href={`/${locale}/products`}
           className="inline-flex items-center text-blue-600 dark:text-blue-400 mb-8 hover:underline"
         >
           <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +126,7 @@ export default function ProductDetailPage() {
             </div>
 
             <Link
-              href={`/contact?product=${slug}`}
+              href={`/${locale}/contact?product=${slug}`}
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
             >
               {t("products.requestQuote")}
