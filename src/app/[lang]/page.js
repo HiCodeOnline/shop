@@ -4,6 +4,14 @@ import zhCNMessages from "@/messages/zh-CN.json";
 import zhTWMessages from "@/messages/zh-TW.json";
 
 const PRODUCTS = [
+  "product1",
+  "product2",
+  "product3",
+  "product4",
+  "product5",
+  "product6",
+  "product7",
+  "product8",
   "cnc-machine",
   "laser-cutter",
   "press-machine",
@@ -97,9 +105,9 @@ export default async function HomePage({ params }) {
                   href={`/${lang}/products/${productId}`}
                   className="group mb-6 break-inside-avoid block bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
                 >
-                  <div className={`relative ${aspect} overflow-hidden bg-gray-100 dark:bg-gray-700`}>
+                  <div className={`relative aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-700`}>
                     <img
-                      src={`https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeURIComponent(imagePrompt)}&image_size=${imageSize}`}
+                      src={t.product[productId]?.cover}
                       alt={t.product[productId]?.name}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />

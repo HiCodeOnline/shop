@@ -34,6 +34,159 @@
     }
   },
   "product": {
+    "product1": {
+      "cover": "/products/product1/product1_cover.webp",
+      "name": "不锈钢潜水泵",
+      "shortDesc": "不锈钢潜水泵220v家用小型高扬程井水抽水泵农用灌溉排污水泵",
+      "description": "不锈钢潜水泵220v家用小型高扬程井水抽水泵农用灌溉排污水泵",
+      "specs": {
+        "workArea": "品牌",
+        "workAreaValue": "阿塞特",
+        "spindleSpeed": "型号",
+        "spindleSpeedValue": "不锈钢潜水泵",
+        "accuracy": "额定电压",
+        "accuracyValue": "220V",
+        "power": "材质",
+        "powerValue": "不锈钢"
+      },
+      "introImgs": [
+        { "src": "/products/product1/product1_cover.webp", "alt": "product1 cover"},
+        { "src": "/products/product1/product1_intro1.webp", "alt": "product1 intro 1"},
+        { "src": "/products/product1/product1_intro2.webp", "alt": "product1 intro 2"}, 
+        { "src": "/products/product1/product1_intro3.webp", "alt": "product1 intro 3"},
+        { "src": "/products/product1/product1_intro4.webp", "alt": "product1 intro 4"}
+      ],
+      "infoImgs": [
+        { "src": "/products/product1/product1_info1.jpg", "alt": "product1 info"},
+        { "src": "/products/product1/product1_info2.png", "alt": "product1 info 2"},
+        { "src": "/products/product1/product1_info3.png", "alt": "product1 info 3"},
+        { "src": "/products/product1/product1_info4.jpg", "alt": "product1 info 4"},
+        { "src": "/products/product1/product1_info5.jpg", "alt": "product1 info 5"},
+        { "src": "/products/product1/product1_info6.jpg", "alt": "product1 info 6"},
+        { "src": "/products/product1/product1_info7.jpg", "alt": "product1 info 7"},
+        { "src": "/products/product1/product1_info8.jpg", "alt": "product1 info 8"},
+        { "src": "/products/product1/product1_info9.jpg", "alt": "product1 info 9"},
+        { "src": "/products/product1/product1_info10.jpg", "alt": "product1 info 10"},
+        { "src": "/products/product1/product1_info12.jpg", "alt": "product1 info 12"},
+        { "src": "/products/product1/product1_info13.jpg", "alt": "product1 info 13"},
+        { "src": "/products/product1/product1_info14.jpg", "alt": "product1 info 14"},
+        { "src": "/products/product1/product1_info15.jpg", "alt": "product1 info 15"},
+        { "src": "/products/product1/product1_info16.jpg", "alt": "product1 info 16"},
+        { "src": "/products/product1/product1_info18.gif", "alt": "product1 info 18"},
+        { "src": "/products/product1/product1_info19.jpg", "alt": "product1 info 19"},
+        { "src": "/products/product1/product1_info20.jpg", "alt": "product1 info 20"},
+        { "src": "/products/product1/product1_info21.jpg", "alt": "product1 info 21"},
+        { "src": "/products/product1/product1_info22.jpg", "alt": "product1 info 22"},
+        { "src": "/products/product1/product1_info23.jpg", "alt": "product1 info 23"},
+        { "src": "/products/product1/product1_info24.jpg", "alt": "product1 info 24"},
+        { "src": "/products/product1/product1_info25.jpg", "alt": "product1 info 25"},
+        { "src": "/products/product1/product1_info26.jpg", "alt": "product1 info 26"},
+        { "src": "/products/product1/product1_info27.jpg", "alt": "product1 info 27"},
+        { "src": "/products/product1/product1_info28.jpg", "alt": "product1 info 28"},
+        { "src": "/products/product1/product1_info29.jpg", "alt": "product1 info 29"},
+        { "src": "/products/product1/product1_info30.jpg", "alt": "product1 info 30"},
+        { "src": "/products/product1/product1_info31.jpg", "alt": "product1 info 31"},
+        { "src": "/products/product1/product1_info32.jpg", "alt": "product1 info 32"},
+        { "src": "/products/product1/product1_info33.jpg", "alt": "product1 info 33"},
+        { "src": "/products/product1/product1_info34.jpg", "alt": "product1 info 34"},
+        { "src": "/products/product1/product1_info35.jpg", "alt": "product1 info 35"}
+      ],
+      "userImgs": [
+
+      ],
+      "features": [
+        "High-precision linear guides",
+        "Automatic tool changer with 20 tools",
+        "Advanced CNC control system",
+        "Coolant system with filtration"
+      ],
+      "applications": [
+        "Automotive parts manufacturing",
+        "Aerospace components",
+        "Medical device production",
+        "Precision mold making"
+      ]
+    },
+
+    "product2": {
+      "cover": "/products/product2/product2_cover.webp",
+      "name": "直流深井泵",
+      "shortDesc": "无刷直流深井潜水泵家用井水电瓶电动车12v48v72v高扬程深井水泵",
+      "description": "无刷直流深井潜水泵家用井水电瓶电动车12v48v72v高扬程深井水泵",
+      "specs": {
+        "workArea": "品牌",
+        "workAreaValue": "阿塞特",
+        "spindleSpeed": "型号",
+        "spindleSpeedValue": "直流深井泵",
+        "accuracy": "相数",
+        "accuracyValue": "直流电泵",
+        "power": "材质",
+        "powerValue": "不锈钢"
+      },
+      "introImgs": [
+        { "src": "/products/product2/product2_cover.webp", "alt": "product1 cover"},
+        { "src": "/products/product2/product2_intro1.webp", "alt": "product1 intro 1"},
+        { "src": "/products/product2/product2_intro2.webp", "alt": "product1 intro 2"}, 
+        { "src": "/products/product2/product2_intro3.webp", "alt": "product1 intro 3"}
+      ],
+      "infoImgs": [
+        { "src": "/products/product2/product2_info1.png", "alt": "product1 info"},
+        { "src": "/products/product2/product2_info2.png", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info3.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info4.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info5.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info6.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info7.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info8.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info9.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info10.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info11.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info12.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info13.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info14.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info15.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info16.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info17.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info18.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info19.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info20.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info21.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info22.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info23.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info24.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info25.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info26.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info27.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info28.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info29.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info30.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info31.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info32.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info33.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info34.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info35.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info36.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info37.jpg", "alt": "product1 info 2"},
+        { "src": "/products/product2/product2_info38.jpg", "alt": "product1 info 2"}
+      ],
+      "userImgs": [
+
+      ],
+      "features": [
+        "High-precision linear guides",
+        "Automatic tool changer with 20 tools",
+        "Advanced CNC control system",
+        "Coolant system with filtration"
+      ],
+      "applications": [
+        "Automotive parts manufacturing",
+        "Aerospace components",
+        "Medical device production",
+        "Precision mold making"
+      ]
+    },
+
+
     "cnc-machine": {
       "name": "CNC Machining Center",
       "shortDesc": "High-precision CNC machining center for complex parts processing",
